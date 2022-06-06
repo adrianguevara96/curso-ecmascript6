@@ -99,3 +99,40 @@ helloPromise().then( (response) => {
 })
 
 //========== Clase 4 - Clases, Módulos y Generadores ==========
+class calculator {
+    constructor(){
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+
+    sum(valueA, valueB){
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,2));
+
+//modulos
+//import { helloF } from './module';
+const helloF = require('./module');
+
+console.log(helloF());
+
+//generadores
+function* helloWorld(){
+    if(true){
+        yield 'Hello, ';
+    }
+
+    if(true){
+        yield 'World';
+    }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
