@@ -8,5 +8,6 @@
   },
   "keywords": ["Javascript", "ecmascript"],
   "author": "Adrian Guevara",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }
